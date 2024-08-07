@@ -21,7 +21,7 @@ const Landing: FC<Props> = ({ open, setOpen, theme, setTheme }) => {
                 <div className="absolute top-4 right-2">
                     <ThemeSwitcher theme={theme} setTheme={setTheme} />
                 </div>
-                <div className="flex-grow flex flex-col items-center px-4 sm:px-6 lg:px-8 dark:text-custom-color-1">
+                <div className="flex-grow flex flex-col items-center px-4 sm:px-6 lg:px-8 font-Cardo dark:text-custom-color-1">
                     <div className="pt-10 w-full flex flex-col items-center">
                         <h1 className="text-4xl sm:text-5xl md:text-6xl font-Cardo text-center dark:bg-gradient-to-r from-custom-color-1 via-custom-color-3 to-custom-color-2 dark:bg-clip-text dark:text-transparent">
                             How Bad Is Your
