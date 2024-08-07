@@ -136,7 +136,7 @@ const Roasting: FC<Props> = ({ open, setOpen, theme }) => {
             >
                 <TiArrowBackOutline size={25} className="dark:text-custom-color-2 text-black" />
             </button>
-            <div className="w-full h-screen flex items-center justify-center overflow-auto dark:bg-black">
+            <div className="w-full h-screen flex items-center font-Cardo justify-center overflow-auto dark:bg-black">
                 <div className="w-[87%] bg-white bg-opacity-15 top-8 rounded-3xl h-[90%] flex flex-col items-center justify-center dark:bg-opacity-10">
                     <div className={`w-full ${roastContent ? 'mt-1 flex-col items-center' : 'flex justify-center items-center h-full'}`}>
                         <div className="2xl:w-[35%] xl:w-[50%] lg:w-[60%] md:w-[80%] sm:w-[95%] 2xl:mx-[32%] xl:mx-[25%] lg:mx-[20%] md:mx-[10%] sm:mx-[2%] flex-1 flex-col items-center">
