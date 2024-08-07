@@ -19,7 +19,7 @@ const Modal: FC<ModalProps> = ({ isOpen, onClose, data }) => {
 
     useEffect(() => {
         if (isOpen) {
-            console.log(data);
+            
 
             const event = data.events.totalEvents || 0;
             const Count = data?.repos?.total_repos;
