@@ -84,7 +84,7 @@ const Roasting: FC<Props> = ({ open, setOpen, theme }) => {
 
                 const data = await response.json();
                 const roastData = `${data.candidates[0].content.parts[0].text}`;
-                console.log(roastData);
+                console.log(data.candidates[0].content.parts[0].text);
 
                 handleDataFetched(roastData);
             } catch (error: any) {

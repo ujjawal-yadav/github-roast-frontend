@@ -31,8 +31,8 @@ const Landing: FC<Props> = ({ open, setOpen, theme, setTheme }) => {
                         </h1>
                         <h1 className="text-lg sm:text-xl md:text-2xl font-Cardo text-center mt-5 dark:bg-gradient-to-r from-custom-color-1 via-custom-color-3 to-custom-color-2 dark:bg-clip-text dark:text-transparent">
                             Our sophisticated A.I. judges your
-                        </h1>
-                        <h1 className="text-lg sm:text-xl md:text-2xl font-Cardo text-center dark:bg-gradient-to-r from-custom-color-1 via-custom-color-3 to-custom-color-2 dark:bg-clip-text dark:text-transparent">
+                        </h1> 
+                         <h1 className="text-lg sm:text-xl md:text-2xl font-Cardo text-center dark:bg-gradient-to-r from-custom-color-1 via-custom-color-3 to-custom-color-2 dark:bg-clip-text dark:text-transparent">
                             Github Profile
                         </h1>
                         <button onClick={handleFindOutClick} className="bg-gray-900 hover:bg-black text-white font-bold py-2 px-6 mt-5 rounded-full flex items-center">
