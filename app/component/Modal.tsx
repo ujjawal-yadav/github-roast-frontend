@@ -85,7 +85,7 @@ const Modal: FC<ModalProps> = ({ isOpen, onClose, data }) => {
 
     return (
         <div className="fixed w-full h-full inset-0 flex items-center justify-center bg-slate-950 bg-opacity-80">
-            <div className="bg-black w-[50%] flex items-center font-Cardo justify-center rounded-lg p-4 relative">
+            <div className="bg-black w-[50%]  md:w-[60%]  sm:w-[75%] flex items-center font-Cardo justify-center rounded-lg p-4 relative">
                 <button
                     className="absolute top-2 right-2 z-10 text-white"
                     onClick={onClose}
