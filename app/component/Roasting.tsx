@@ -38,12 +38,17 @@ const Roasting: FC<Props> = ({ open, setOpen, theme }) => {
         }
     };
 
+    const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
+        if (e.key === 'Enter') {
+            handleRoastClick();
+        }
+    };
+
     const handleDataFetched = (data: string) => {
         setRoastContent(data);
         setShouldFetch(false);
         setLoading(false);
         setRequestCount(prevCount => prevCount + 1);
-        
     };
 
     const handleError = (error: string) => {
@@ -84,7 +89,6 @@ const Roasting: FC<Props> = ({ open, setOpen, theme }) => {
 
                 const data = await response.json();
                 const roastData = `${data.candidates[0].content.parts[0].text}`;
-                
 
                 handleDataFetched(roastData);
             } catch (error: any) {
@@ -103,22 +107,18 @@ const Roasting: FC<Props> = ({ open, setOpen, theme }) => {
     useEffect(() => {
         if (socket) {
             socket.on("connect", () => {
-                
                 setSocketId(socket.id as string);
             });
 
             socket.on("disconnect", () => {
-                
                 setSocketId("");
             });
 
             socket.on("githubData", (data) => {
-                
                 setGithubData(data);
                 if (requestCount <= 2) {
                     setIsModalOpen(true);
                 }
-            
             });
 
             return () => {
@@ -147,6 +147,7 @@ const Roasting: FC<Props> = ({ open, setOpen, theme }) => {
                                 placeholder="Octocat.." 
                                 value={githubUsername}
                                 onChange={(e) => setGithubUsername(e.target.value)}
+                                onKeyPress={handleKeyPress}
                                 required 
                                 disabled={loading}
                             />
@@ -174,7 +175,6 @@ const Roasting: FC<Props> = ({ open, setOpen, theme }) => {
                 </div>
             </div>
             <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} data={githubData} />
-            
         </div>
     );
 };
