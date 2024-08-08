@@ -11,7 +11,7 @@ GitHub Roast is a playful and interactive web application designed to generate h
 - [Hooks](#hooks)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [License](#license)
+
 
 ## Project Description
 
@@ -112,6 +112,3 @@ GitHub Roast takes a GitHub username as input and generates a creative roast bas
 4. Push to the branch (`git push origin feature/fooBar`).
 5. Create a new Pull Request.
 
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
