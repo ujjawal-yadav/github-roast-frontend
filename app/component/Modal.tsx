@@ -70,7 +70,7 @@ const Modal: FC<ModalProps> = ({ isOpen, onClose, data }) => {
 
             autoCloseTimeout = setTimeout(() => {
                 onCloseRef.current();
-            }, 7500);
+            }, 7000);
 
             return () => {
                 clearTimeout(userTimeout);
