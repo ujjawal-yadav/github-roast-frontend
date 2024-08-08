@@ -51,8 +51,8 @@ const Roasting: FC<Props> = ({ open, setOpen, theme }) => {
         setRequestCount(prevCount => prevCount + 1);
     };
 
-    const handleError = (error: string) => {
-        setError(error);
+    const handleError = (errorMessage: string) => {
+        setError(errorMessage);
         setRoastContent("");
         setShouldFetch(false);
         setLoading(false);
@@ -75,12 +75,9 @@ const Roasting: FC<Props> = ({ open, setOpen, theme }) => {
 
                 if (!response.ok) {
                     if (response.status === 400) {
-                        const errorMessage = "Enter a correct GitHub username.";
-                        throw new Error(errorMessage);
-                    }
-                    if (response.status === 503) {
-                        const errorMessage = "The AI is busy...Please try again";
-                        throw new Error(errorMessage);
+                        throw new Error("Enter a correct GitHub username.");
+                    } else if (response.status === 503) {
+                        throw new Error("The AI is busy... Please try again.");
                     } else {
                         const errorMessage = await response.text();
                         throw new Error(errorMessage || "Failed to fetch data");
@@ -92,8 +89,8 @@ const Roasting: FC<Props> = ({ open, setOpen, theme }) => {
 
                 handleDataFetched(roastData);
             } catch (error: any) {
-                handleError("Enter the correct Username");
-                toast.error(error.message);
+                handleError(error.message || "Failed to fetch data");
+                toast.error(error.message || "Failed to fetch data");
             }
         };
 
