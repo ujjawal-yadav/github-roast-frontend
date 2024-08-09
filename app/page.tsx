@@ -16,7 +16,7 @@ const Page: FC<Props> = (props) => {
     <div className="relative w-full h-screen overflow-hidden">
       <Heading
         title="Github Roast"
-        description="Hey this is my way of Github roast"
+        description="Ready for some tough love on your code?"
         keywords="github,Roast,profile"
       />
       <div className={`absolute top-0 w-full h-full transition-transform ${open ? 'translate-x-full' : 'translate-x-0'}`}>
